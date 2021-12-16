@@ -8,15 +8,15 @@
 import RealmSwift
 
 class Cell: EmbeddedObject, ObjectKeyIdentifiable {
-    @Persisted var isBomb = false
-    @Persisted var numBombNeigbours = 0
+    @Persisted var isMine = false
+    @Persisted var numMineNeigbours = 0
     @Persisted var isExposed = false
     @Persisted var isFlagged = false
     @Persisted var hasExploded = false
     
-    convenience init(isBomb: Bool, numBombNeigbours: Int) {
+    convenience init(isMine: Bool, numMineNeigbours: Int) {
         self.init()
-        self.isBomb = isBomb
-        self.numBombNeigbours = numBombNeigbours
+        self.isMine = isMine
+        self.numMineNeigbours = numMineNeigbours
     }
 }

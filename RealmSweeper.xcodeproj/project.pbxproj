@@ -11,16 +11,17 @@
 		0A11A10C2763C1E200FFDA75 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A10B2763C1E200FFDA75 /* LogoutButton.swift */; };
 		0A11A10E2763CCD400FFDA75 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A10D2763CCD400FFDA75 /* GameView.swift */; };
 		0A11A1102763D38200FFDA75 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A10F2763D38200FFDA75 /* CellView.swift */; };
-		0A11A1122763D60300FFDA75 /* BombCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A1112763D60300FFDA75 /* BombCountView.swift */; };
+		0A11A1122763D60300FFDA75 /* MineCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A1112763D60300FFDA75 /* MineCountView.swift */; };
 		0A11A1182763D6F700FFDA75 /* _PreviewColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A1142763D6F700FFDA75 /* _PreviewColorScheme.swift */; };
 		0A11A1192763D6F700FFDA75 /* _PreviewNoDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A1152763D6F700FFDA75 /* _PreviewNoDevice.swift */; };
 		0A11A11A2763D6F700FFDA75 /* _PreviewOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A1162763D6F700FFDA75 /* _PreviewOrientation.swift */; };
 		0A11A11B2763D6F700FFDA75 /* _PreviewDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A11A1172763D6F700FFDA75 /* _PreviewDevices.swift */; };
-		0A1BFA0B27690DA700301ED1 /* BombView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1BFA0A27690DA600301ED1 /* BombView.swift */; };
+		0A1BFA0B27690DA700301ED1 /* MineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1BFA0A27690DA600301ED1 /* MineView.swift */; };
 		0A1F502D276A1799009FDAD4 /* FlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F502C276A1799009FDAD4 /* FlagView.swift */; };
 		0A1F502F276A18FB009FDAD4 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F502E276A18FB009FDAD4 /* BoardView.swift */; };
 		0A1F5031276A26E3009FDAD4 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5030276A26E3009FDAD4 /* TileView.swift */; };
 		0A1F5034276A4BA8009FDAD4 /* TextDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5033276A4BA8009FDAD4 /* TextDate.swift */; };
+		0A1F5039276B5F49009FDAD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5038276B5F49009FDAD4 /* SettingsView.swift */; };
 		0ABC00192763A0FC003E059B /* RealmSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */; };
 		0ABC001B2763A0FC003E059B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC001A2763A0FC003E059B /* ContentView.swift */; };
 		0ABC001D2763A0FF003E059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABC001C2763A0FF003E059B /* Assets.xcassets */; };
@@ -39,16 +40,17 @@
 		0A11A10B2763C1E200FFDA75 /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
 		0A11A10D2763CCD400FFDA75 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		0A11A10F2763D38200FFDA75 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
-		0A11A1112763D60300FFDA75 /* BombCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombCountView.swift; sourceTree = "<group>"; };
+		0A11A1112763D60300FFDA75 /* MineCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCountView.swift; sourceTree = "<group>"; };
 		0A11A1142763D6F700FFDA75 /* _PreviewColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PreviewColorScheme.swift; sourceTree = "<group>"; };
 		0A11A1152763D6F700FFDA75 /* _PreviewNoDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PreviewNoDevice.swift; sourceTree = "<group>"; };
 		0A11A1162763D6F700FFDA75 /* _PreviewOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PreviewOrientation.swift; sourceTree = "<group>"; };
 		0A11A1172763D6F700FFDA75 /* _PreviewDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = _PreviewDevices.swift; sourceTree = "<group>"; };
-		0A1BFA0A27690DA600301ED1 /* BombView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BombView.swift; sourceTree = "<group>"; };
+		0A1BFA0A27690DA600301ED1 /* MineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineView.swift; sourceTree = "<group>"; };
 		0A1F502C276A1799009FDAD4 /* FlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagView.swift; sourceTree = "<group>"; };
 		0A1F502E276A18FB009FDAD4 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		0A1F5030276A26E3009FDAD4 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		0A1F5033276A4BA8009FDAD4 /* TextDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDate.swift; sourceTree = "<group>"; };
+		0A1F5038276B5F49009FDAD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0ABC00152763A0FC003E059B /* RealmSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSweeperApp.swift; sourceTree = "<group>"; };
 		0ABC001A2763A0FC003E059B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,37 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		0A1F5035276B5EC1009FDAD4 /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				0A11A1112763D60300FFDA75 /* MineCountView.swift */,
+				0A1BFA0A27690DA600301ED1 /* MineView.swift */,
+				0A1F502C276A1799009FDAD4 /* FlagView.swift */,
+				0A1F5030276A26E3009FDAD4 /* TileView.swift */,
+				0A11A10F2763D38200FFDA75 /* CellView.swift */,
+			);
+			path = Tiles;
+			sourceTree = "<group>";
+		};
+		0A1F5036276B5EFD009FDAD4 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				0A11A1092763BCEC00FFDA75 /* LoginView.swift */,
+				0A11A10B2763C1E200FFDA75 /* LogoutButton.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		0A1F5037276B5F20009FDAD4 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC00382763B394003E059B /* GameListView.swift */,
+				0A11A10D2763CCD400FFDA75 /* GameView.swift */,
+				0A1F502E276A18FB009FDAD4 /* BoardView.swift */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
 		0ABC000C2763A0FC003E059B = {
 			isa = PBXGroup;
 			children = (
@@ -135,18 +168,12 @@
 		0ABC002C2763A242003E059B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0A1F5032276A4B93009FDAD4 /* Components */,
 				0ABC001A2763A0FC003E059B /* ContentView.swift */,
-				0A11A1092763BCEC00FFDA75 /* LoginView.swift */,
-				0A11A10B2763C1E200FFDA75 /* LogoutButton.swift */,
-				0ABC00382763B394003E059B /* GameListView.swift */,
-				0A11A10D2763CCD400FFDA75 /* GameView.swift */,
-				0A1F502E276A18FB009FDAD4 /* BoardView.swift */,
-				0A11A10F2763D38200FFDA75 /* CellView.swift */,
-				0A11A1112763D60300FFDA75 /* BombCountView.swift */,
-				0A1BFA0A27690DA600301ED1 /* BombView.swift */,
-				0A1F502C276A1799009FDAD4 /* FlagView.swift */,
-				0A1F5030276A26E3009FDAD4 /* TileView.swift */,
+				0A1F5032276A4B93009FDAD4 /* Components */,
+				0A1F5036276B5EFD009FDAD4 /* Users */,
+				0A1F5037276B5F20009FDAD4 /* Game */,
+				0A1F5035276B5EC1009FDAD4 /* Tiles */,
+				0A1F5038276B5F49009FDAD4 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,8 +277,8 @@
 				0ABC00192763A0FC003E059B /* RealmSweeperApp.swift in Sources */,
 				0A11A10E2763CCD400FFDA75 /* GameView.swift in Sources */,
 				0A11A1192763D6F700FFDA75 /* _PreviewNoDevice.swift in Sources */,
-				0A11A1122763D60300FFDA75 /* BombCountView.swift in Sources */,
-				0A1BFA0B27690DA700301ED1 /* BombView.swift in Sources */,
+				0A11A1122763D60300FFDA75 /* MineCountView.swift in Sources */,
+				0A1BFA0B27690DA700301ED1 /* MineView.swift in Sources */,
 				0ABC00332763A3F6003E059B /* Board.swift in Sources */,
 				0A1F5034276A4BA8009FDAD4 /* TextDate.swift in Sources */,
 				0ABC00352763A494003E059B /* Row.swift in Sources */,
@@ -260,6 +287,7 @@
 				0A11A10C2763C1E200FFDA75 /* LogoutButton.swift in Sources */,
 				0A1F5031276A26E3009FDAD4 /* TileView.swift in Sources */,
 				0ABC00312763A2A2003E059B /* Cell.swift in Sources */,
+				0A1F5039276B5F49009FDAD4 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

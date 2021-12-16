@@ -11,9 +11,7 @@ import RealmSwift
 struct GameView: View {
     @ObservedRealmObject var game: Game
     
-    @State private var remainingBombs = 0
-    @State private var winningTime: Int?
-    @State private var gameOver = false
+    @State private var remainingMines = 0
     
     var body: some View {
         VStack {
@@ -28,29 +26,25 @@ struct GameView: View {
                     Text("Most recent move: ")
                     TextDate(latestMoveTime)
                 }
-                Text(latestMoveTime, style: .time)
             }
-            if let winningTime = winningTime {
+            if let winningTime = game.winningTimeInSeconds {
                 Text("Game completed in \(winningTime) seconds")
             }
-            Text("\(remainingBombs) bombs remaining")
+            Text("\(remainingMines) mines remaining")
             if let board = game.board {
-                BoardView(board: board, gameOver: gameOver, newMove: newMove)
+                BoardView(board: board, gameStatus: $game.gameStatus, newMove: newMove)
                     .padding()
             }
         }
         .onChange(of: game.latestMoveTime) { _ in
-            countBombs()
+            countMines()
         }
-        .onAppear(perform: countBombs)
+        .onAppear(perform: countMines)
     }
     
-//    private func gameOver(_ win: Bool) {
-//    }
-    
-    private func countBombs() {
+    private func countMines() {
         if let board = game.board {
-            remainingBombs = board.remainingBombs
+            remainingMines = board.remainingMines
         }
     }
     
@@ -58,18 +52,17 @@ struct GameView: View {
         let date = Date()
         if game.startTime == nil {
             $game.startTime.wrappedValue = date
+            $game.gameStatus.wrappedValue = .inProgress
         }
         $game.latestMoveTime.wrappedValue = date
         if game.hasWon {
             if let startTime = game.startTime {
-                winningTime = Int(date.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate)
-                print("WON!")
-                gameOver = true
+                $game.winningTimeInSeconds.wrappedValue = Int(date.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate)
+                $game.gameStatus.wrappedValue = .won
             }
         }
         if game.hasLost {
-            gameOver = true
-            print("LOST!")
+            $game.gameStatus.wrappedValue = .lost
         }
     }
 }

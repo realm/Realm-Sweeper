@@ -1,5 +1,5 @@
 //
-//  BombView.swift
+//  MineView.swift
 //  RealmSweeper
 //
 //  Created by Andrew Morgan on 14/12/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BombView: View {
+struct MineView: View {
     var exploded = false
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -18,16 +18,16 @@ struct BombView: View {
     }
 }
 
-struct BombView_Previews: PreviewProvider {
+struct MineView_Previews: PreviewProvider {
     static var previews: some View {
         _PreviewNoDevice(
             _PreviewColorScheme (
                 Group {
-                    BombView()
+                    MineView()
                         .frame(width: 25, height: 25)
-                    BombView(exploded: true)
+                    MineView(exploded: true)
                         .frame(width: 50, height: 50)
-                    BombView()
+                    MineView()
                         .frame(width: 100, height: 100)
                 }
             )

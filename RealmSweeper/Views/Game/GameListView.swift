@@ -10,8 +10,14 @@ import RealmSwift
 
 struct GameListView: View {
     @ObservedResults(Game.self, sortDescriptor: SortDescriptor(keyPath: "startTime", ascending: false)) var games
+    
+    @AppStorage("numRows") var numRows = 10
+    @AppStorage("numColumns") var numColumns = 10
+    @AppStorage("numMines") var numMines = 15
+    
     @State private var startGame = false
     @State private var isWaiting = true
+    @State private var showingSettings = false
     
     @State private var game: Game?
     
@@ -37,6 +43,15 @@ struct GameListView: View {
             if let game = game {
                 NavigationLink(destination: GameView(game: game), isActive: $startGame) {}
             }
+            NavigationLink(destination: SettingsView(isPresented: $showingSettings), isActive: $showingSettings) {}
+        }
+        .navigationBarTitle("Games", displayMode: .inline)
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: { showingSettings.toggle() }) {
+                    Image(systemName: "gear")
+                }
+            }
         }
     }
     
@@ -47,7 +62,8 @@ struct GameListView: View {
     }
     
     private func createGame() {
-        game = Game(rows: 8, cols: 8, bombs: 16)
+        numMines = min(numMines, numRows * numColumns)
+        game = Game(rows: numRows, cols: numColumns, mines: numMines)
         if let game = game {
             $games.append(game)
         }

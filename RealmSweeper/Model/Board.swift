@@ -9,37 +9,36 @@ import RealmSwift
 
 class Board: EmbeddedObject, ObjectKeyIdentifiable {
     @Persisted var rows = List<Row>()
-    @Persisted var startingNumberOfBombs = 0
+    @Persisted var startingNumberOfMines = 0
     
-    var remainingBombs: Int {
+    var remainingMines: Int {
         var count = 0
         rows.forEach() { row in
             count += row.cells.filter{ $0.isFlagged }.count
         }
-        return startingNumberOfBombs - count
+        return startingNumberOfMines - count
     }
     
-    convenience init(numRows: Int, numColums: Int, numBombs: Int) {
+    convenience init(numRows: Int, numColums: Int, numMines: Int) {
         self.init()
-        startingNumberOfBombs = numBombs
+        startingNumberOfMines = numMines
         for _ in 1...numRows {
             rows.append(Row(numColums))
         }
-        var bombsToPlace = min(numColums * numRows, numBombs)
+        var minesToPlace = min(numColums * numRows, numMines)
         
-        while(bombsToPlace > 0) {
+        while(minesToPlace > 0) {
             let col = Int.random(in: 0...numColums - 1)
             let row = Int.random(in: 0...numRows - 1)
-            if !rows[row].cells[col].isBomb {
-                rows[row].cells[col].isBomb = true
-                print("Placed bomb \(bombsToPlace)")
-                bombsToPlace -= 1
+            if !rows[row].cells[col].isMine {
+                rows[row].cells[col].isMine = true
+                minesToPlace -= 1
             }
         }
         
         for row in 0...numRows - 1 {
             for col in 0...numColums - 1 {
-                rows[row].cells[col].numBombNeigbours = countNeighbours(row: row, col: col)
+                rows[row].cells[col].numMineNeigbours = countNeighbours(row: row, col: col)
             }
         }
     }
@@ -57,9 +56,9 @@ class Board: EmbeddedObject, ObjectKeyIdentifiable {
         guard row >= 0 && row < rows.count && col >= 0 && col < rows[row].cells.count else {
             return neighbours
         }
-        if col > 0 && rows[row].cells[col - 1].isBomb { neighbours += 1 }
-        if rows[row].cells[col].isBomb { neighbours += 1 }
-        if col < rows[row].cells.count - 1 && rows[row].cells[col + 1].isBomb { neighbours += 1 }
+        if col > 0 && rows[row].cells[col - 1].isMine { neighbours += 1 }
+        if rows[row].cells[col].isMine { neighbours += 1 }
+        if col < rows[row].cells.count - 1 && rows[row].cells[col + 1].isMine { neighbours += 1 }
         return neighbours
     }
     
@@ -72,11 +71,11 @@ class Board: EmbeddedObject, ObjectKeyIdentifiable {
         let coord = Coord(row: row, col: col)
         let cell = self.rows[row].cells[col]
         
-        if cell.isExposed || cell.isBomb || cell.isFlagged || coords.contains(coord) {
+        if cell.isExposed || cell.isMine || cell.isFlagged || coords.contains(coord) {
             return coords
         }
         coords.insert(coord)
-        if cell.numBombNeigbours == 0 {
+        if cell.numMineNeigbours == 0 {
             if col > 0 {
                 coords = findCellsToExpose(row: row, col: col - 1, existingCoords: coords)
                 if row > 0 {

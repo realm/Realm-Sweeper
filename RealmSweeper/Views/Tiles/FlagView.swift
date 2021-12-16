@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct FlagView: View {
+    var mistake: Bool
+    
     var body: some View {
         VStack(alignment: .center,spacing: 0) {
-            Image("flag")
+            Image(mistake ? "wrong-flag" : "flag")
                 .resizable()
         }
     }
@@ -21,11 +23,11 @@ struct FlagView_Previews: PreviewProvider {
         _PreviewNoDevice(
             _PreviewColorScheme (
                 Group {
-                    FlagView()
+                    FlagView(mistake: false)
                         .frame(width: 25, height: 25)
-                    FlagView()
+                    FlagView(mistake: true)
                         .frame(width: 50, height: 50)
-                    FlagView()
+                    FlagView(mistake: false)
                         .frame(width: 100, height: 100)
                 }
             )

@@ -1,5 +1,5 @@
 //
-//  BombCountView.swift
+//  MineCountView.swift
 //  RealmSweeper
 //
 //  Created by Andrew Morgan on 10/12/2021.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BombCountView: View {
+struct MineCountView: View {
     let count: Int
     
     var color: Color {
@@ -50,22 +50,22 @@ struct BombCountView: View {
     }
 }
 
-struct BombCountView_Previews: PreviewProvider {
+struct MineCountView_Previews: PreviewProvider {
     static var previews: some View {
         _PreviewNoDevice(
             _PreviewColorScheme (
                 Group {
-                    BombCountView(count: 0)
+                    MineCountView(count: 0)
                         .frame(width: 50, height: 50)
-                    BombCountView(count: 1)
+                    MineCountView(count: 1)
                         .frame(width: 50, height: 50)
-                    BombCountView(count: 2)
+                    MineCountView(count: 2)
                         .frame(width: 50, height: 50)
-                    BombCountView(count: 3)
+                    MineCountView(count: 3)
                         .frame(width: 50, height: 50)
-                    BombCountView(count: 4)
+                    MineCountView(count: 4)
                         .frame(width: 100, height: 100)
-                    BombCountView(count: 5)
+                    MineCountView(count: 5)
                         .frame(width: 50, height: 50)
                 }
             )

@@ -17,17 +17,19 @@ class Game: Object, ObjectKeyIdentifiable {
     @Persisted var latestMoveTime: Date?
     @Persisted var secondsTakenToComplete: Int?
     @Persisted var board: Board?
+    @Persisted var gameStatus = GameStatus.notStarted
+    @Persisted var winningTimeInSeconds: Int?
     
-    convenience init(rows: Int, cols: Int, bombs: Int) {
+    convenience init(rows: Int, cols: Int, mines: Int) {
         self.init()
         numRows = rows
         numCols = cols
-        board = Board(numRows: rows, numColums: cols, numBombs: bombs)
+        board = Board(numRows: rows, numColums: cols, numMines: mines)
     }
     
     var hasWon: Bool {
         guard let board = board else { return false }
-        if board.remainingBombs > 0 { return false }
+        if board.remainingMines > 0 { return false }
         
         var result = true
         
@@ -49,7 +51,7 @@ class Game: Object, ObjectKeyIdentifiable {
         
         board.rows.forEach() { row in
             row.cells.forEach() { cell in
-                if cell.isExposed && cell.isBomb {
+                if cell.isExposed && cell.isMine {
                     result = true
                     return
                 }
@@ -58,4 +60,11 @@ class Game: Object, ObjectKeyIdentifiable {
         }
         return result
     }
+}
+
+enum GameStatus: String, PersistableEnum {
+    case notStarted = "Not Started"
+    case inProgress = "In Progress"
+    case won = "Won"
+    case lost = "Lost"
 }
