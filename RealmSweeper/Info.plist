@@ -7,5 +7,9 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CrystalItalic-R6A.ttf</string>
+	</array>
 </dict>
 </plist>

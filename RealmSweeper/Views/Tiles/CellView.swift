@@ -13,34 +13,41 @@ struct CellView: View {
     let gameStatus: GameStatus
     
     var body: some View {
-        if cell.isExposed || gameStatus == .won {
-            Group {
+        if gameStatus == .won {
+            if cell.isExposed && !cell.isFlagged {
+                MineCountView(count: cell.numMineNeigbours)
+            } else {
+                FlagView(mistake: false)
+            }
+        }
+        if gameStatus == .lost {
+            if cell.isFlagged {
+                FlagView(mistake: !cell.isMine)
+            } else if cell.isMine {
+                MineView(exploded: cell.isExposed)
+            } else {
+                if cell.isExposed {
+                    MineCountView(count: cell.numMineNeigbours)
+                } else {
+                    TileView()
+                }
+            }
+        }
+        if gameStatus == .notStarted {
+            TileView()
+        }
+        if gameStatus == .inProgress {
+            if cell.isExposed {
                 if cell.isMine {
-                    MineView(exploded: cell.hasExploded)
+                    MineView()
                 } else {
                     MineCountView(count: cell.numMineNeigbours)
                 }
-            }
-            .background(.gray)
-            .border(.black)
-        } else {
-            ZStack {
-                if gameStatus == .lost && cell.isMine && !cell.isFlagged {
-                    MineView()
-                        .background(.gray)
-                        .border(.black)
-                } else if gameStatus == .lost && cell.isMine && cell.isFlagged {
-                    TileView()
+            } else {
+                if cell.isFlagged {
                     FlagView(mistake: false)
-                }
-                else if gameStatus == .lost && cell.isFlagged {
-                    TileView()
-                    FlagView(mistake: !cell.isMine)
                 } else {
                     TileView()
-                    if cell.isFlagged {
-                        FlagView(mistake: false)
-                    }
                 }
             }
         }

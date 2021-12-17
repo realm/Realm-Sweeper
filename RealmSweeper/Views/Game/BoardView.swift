@@ -28,6 +28,7 @@ struct BoardView: View {
                                         width: min(geo.size.width / CGFloat(numCols), geo.size.height / CGFloat(numRows)),
                                         height: min(geo.size.width / CGFloat(numCols), geo.size.height / CGFloat(numRows))
                                     )
+                                    .border(.black, width: 1.0)
                                     .onTapGesture() {
                                         expose(row: row, col: col)
                                     }
@@ -38,6 +39,7 @@ struct BoardView: View {
                         }
                     }
                 }
+                .border(.black, width: 3.0)
             }
         }
     }
@@ -75,8 +77,9 @@ struct BoardView: View {
     }
 }
 
-//struct BoardView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BoardView()
-//    }
-//}
+struct BoardView_Previews: PreviewProvider {
+    static var previews: some View {
+        let game = Game(rows: 12, cols: 12, mines: 15)
+        return BoardView(board: game.board!, gameStatus: .constant(.inProgress), newMove: {})
+    }
+}

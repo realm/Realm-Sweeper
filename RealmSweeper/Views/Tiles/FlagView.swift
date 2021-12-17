@@ -11,9 +11,12 @@ struct FlagView: View {
     var mistake: Bool
     
     var body: some View {
-        VStack(alignment: .center,spacing: 0) {
-            Image(mistake ? "wrong-flag" : "flag")
-                .resizable()
+        ZStack {
+            TileView()
+            VStack(alignment: .center,spacing: 0) {
+                Image(mistake ? "wrong-flag" : "flag")
+                    .resizable()
+            }
         }
     }
 }

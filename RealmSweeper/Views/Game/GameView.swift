@@ -10,32 +10,39 @@ import RealmSwift
 
 struct GameView: View {
     @ObservedRealmObject var game: Game
+    @Environment(\.presentationMode) var presentationMode
     
     @State private var remainingMines = 0
+    @State private var elapsedTime = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
-            if let startTime = game.startTime {
-                HStack {
-                    Text("Start time: ")
-                    TextDate(startTime)
-                }
-            }
-            if let latestMoveTime = game.latestMoveTime {
-                HStack {
-                    Text("Most recent move: ")
-                    TextDate(latestMoveTime)
-                }
-            }
-            if let winningTime = game.winningTimeInSeconds {
-                Text("Game completed in \(winningTime) seconds")
-            }
-            Text("\(remainingMines) mines remaining")
-            if let board = game.board {
-                BoardView(board: board, gameStatus: $game.gameStatus, newMove: newMove)
+            Spacer()
+            HStack {
+                Spacer()
+                LEDCounter(count: remainingMines)
+                    .frame(width: 150, height: 70)
+                StatusButton(status: game.gameStatus, action: newGame)
+                    .frame(width: 70, height: 70)
                     .padding()
+                LEDCounter(count: game.winningTimeInSeconds ?? (game.gameStatus == .inProgress ? elapsedTime : 888))
+                    .frame(width: 150, height: 70)
+                    .onReceive(timer, perform: updateElapsedTime)
+                Spacer()
             }
+            Spacer()
+            if let board = game.board {
+                VStack {
+                    HStack {
+                        BoardView(board: board, gameStatus: $game.gameStatus, newMove: newMove)
+                            .padding()
+                    }
+                }
+            }
+            Spacer()
         }
+        .background(.gray)
         .onChange(of: game.latestMoveTime) { _ in
             countMines()
         }
@@ -65,10 +72,22 @@ struct GameView: View {
             $game.gameStatus.wrappedValue = .lost
         }
     }
+    
+    private func updateElapsedTime(_ date: Date) {
+        if let startTime = game.startTime {
+            elapsedTime = Int(date.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate)
+        }
+    }
+    
+    private func newGame() {
+        presentationMode.wrappedValue.dismiss()
+    }
 }
 
-//struct GameView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GameView()
-//    }
-//}
+struct GameView_Previews: PreviewProvider {
+    static var previews: some View {
+        let game = Game(rows: 12, cols: 12, mines: 15)
+        GameView(game: game)
+            .previewInterfaceOrientation(.portrait)
+    }
+}

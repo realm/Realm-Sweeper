@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct GameSummaryView: View {
+    let game: Game
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+
+        }
     }
 }
 
 struct GameSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        GameSummaryView()
+        let game = Game()
+        return _PreviewNoDevice (
+            _PreviewColorScheme (
+                GameSummaryView(game: game)
+                    .padding()
+            )
+        )
     }
 }

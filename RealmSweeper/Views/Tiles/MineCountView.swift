@@ -37,16 +37,18 @@ struct MineCountView: View {
     }
     
     var body: some View {
-        GeometryReader { g in
-            HStack(alignment: .center, spacing: 0) {
-                Spacer()
-                Text("\(count)")
-                    .font(.system(size: g.size.height > g.size.width ? g.size.width * 0.8 : g.size.height * 0.8))
-                    .foregroundColor(color)
-                Spacer()
+        VStack(alignment: .center, spacing: 0) {
+            GeometryReader { g in
+                HStack(alignment: .center, spacing: 0) {
+                    Spacer()
+                    Text("\(count)")
+                        .font(.system(size: g.size.height > g.size.width ? g.size.width * 0.8 : g.size.height * 0.8))
+                        .foregroundColor(color)
+                    Spacer()
+                }
             }
-            .background(.gray)
         }
+        .background(.gray)
     }
 }
 

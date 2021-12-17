@@ -17,8 +17,7 @@ struct LEDCounter: View {
                     Spacer()
                     Text(String(format: "%03d", count))
                         .font(Font.custom("CrystalItalic-", size: g.size.height * 1.2))
-//                        .font(.system(size: g.size.height * 0.8))
-                        .foregroundColor(.red)
+                        .foregroundColor(count >= 0 ? .red : .orange)
                     Spacer()
                 }
             }
