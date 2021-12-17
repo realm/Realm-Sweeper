@@ -45,9 +45,6 @@ struct BoardView: View {
     }
     
     private func expose(row: Int, col: Int) {
-        if gameStatus == .notStarted {
-            gameStatus = .inProgress
-        }
         if gameStatus == .inProgress || gameStatus == .notStarted {
             if !board.rows[row].cells[col].isExposed {
                 if board.rows[row].cells[col].isMine {

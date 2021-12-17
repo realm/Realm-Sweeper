@@ -22,7 +22,8 @@
 		0A1F5031276A26E3009FDAD4 /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5030276A26E3009FDAD4 /* TileView.swift */; };
 		0A1F5034276A4BA8009FDAD4 /* TextDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5033276A4BA8009FDAD4 /* TextDate.swift */; };
 		0A1F5039276B5F49009FDAD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5038276B5F49009FDAD4 /* SettingsView.swift */; };
-		0A802456276BB0A6002E7B61 /* LEDCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A802455276BB0A5002E7B61 /* LEDCounter.swift */; };
+		0A2BDB74276CCD5900A7A866 /* LEDCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BDB73276CCD5900A7A866 /* LEDCounter.swift */; };
+		0A2BDB76276CD15500A7A866 /* CrystalItalic-R6A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BDB75276CD15500A7A866 /* CrystalItalic-R6A.ttf */; };
 		0ABC00192763A0FC003E059B /* RealmSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */; };
 		0ABC001B2763A0FC003E059B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC001A2763A0FC003E059B /* ContentView.swift */; };
 		0ABC001D2763A0FF003E059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABC001C2763A0FF003E059B /* Assets.xcassets */; };
@@ -35,7 +36,6 @@
 		0ABC00372763AE85003E059B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC00362763AE85003E059B /* Game.swift */; };
 		0ABC00392763B394003E059B /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC00382763B394003E059B /* GameListView.swift */; };
 		0AE16579276BCD5A00A5D6A8 /* StatusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE16578276BCD5A00A5D6A8 /* StatusButton.swift */; };
-		0AE1657B276BE67200A5D6A8 /* CrystalItalic-R6A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AE1657A276BE67200A5D6A8 /* CrystalItalic-R6A.ttf */; };
 		0AE1657D276C141300A5D6A8 /* GameSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE1657C276C141300A5D6A8 /* GameSummaryView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +55,8 @@
 		0A1F5030276A26E3009FDAD4 /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		0A1F5033276A4BA8009FDAD4 /* TextDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDate.swift; sourceTree = "<group>"; };
 		0A1F5038276B5F49009FDAD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		0A802455276BB0A5002E7B61 /* LEDCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDCounter.swift; sourceTree = "<group>"; };
+		0A2BDB73276CCD5900A7A866 /* LEDCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDCounter.swift; sourceTree = "<group>"; };
+		0A2BDB75276CD15500A7A866 /* CrystalItalic-R6A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrystalItalic-R6A.ttf"; sourceTree = "<group>"; };
 		0ABC00152763A0FC003E059B /* RealmSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSweeperApp.swift; sourceTree = "<group>"; };
 		0ABC001A2763A0FC003E059B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,7 +69,6 @@
 		0ABC00362763AE85003E059B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		0ABC00382763B394003E059B /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 		0AE16578276BCD5A00A5D6A8 /* StatusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusButton.swift; sourceTree = "<group>"; };
-		0AE1657A276BE67200A5D6A8 /* CrystalItalic-R6A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "CrystalItalic-R6A.ttf"; path = "../../../../../../Desktop/CrystalItalic-R6A.ttf"; sourceTree = "<group>"; };
 		0AE1657C276C141300A5D6A8 /* GameSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,8 +137,8 @@
 		0A802454276BAF51002E7B61 /* Counters */ = {
 			isa = PBXGroup;
 			children = (
-				0AE1657A276BE67200A5D6A8 /* CrystalItalic-R6A.ttf */,
-				0A802455276BB0A5002E7B61 /* LEDCounter.swift */,
+				0A2BDB75276CD15500A7A866 /* CrystalItalic-R6A.ttf */,
+				0A2BDB73276CCD5900A7A866 /* LEDCounter.swift */,
 			);
 			path = Counters;
 			sourceTree = "<group>";
@@ -290,7 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE1657B276BE67200A5D6A8 /* CrystalItalic-R6A.ttf in Resources */,
+				0A2BDB76276CD15500A7A866 /* CrystalItalic-R6A.ttf in Resources */,
 				0ABC00202763A0FF003E059B /* Preview Assets.xcassets in Resources */,
 				0ABC001D2763A0FF003E059B /* Assets.xcassets in Resources */,
 			);
@@ -304,7 +304,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A11A1102763D38200FFDA75 /* CellView.swift in Sources */,
-				0A802456276BB0A6002E7B61 /* LEDCounter.swift in Sources */,
 				0ABC001B2763A0FC003E059B /* ContentView.swift in Sources */,
 				0A11A1182763D6F700FFDA75 /* _PreviewColorScheme.swift in Sources */,
 				0ABC00372763AE85003E059B /* Game.swift in Sources */,
@@ -328,6 +327,7 @@
 				0A1F5031276A26E3009FDAD4 /* TileView.swift in Sources */,
 				0ABC00312763A2A2003E059B /* Cell.swift in Sources */,
 				0A1F5039276B5F49009FDAD4 /* SettingsView.swift in Sources */,
+				0A2BDB74276CCD5900A7A866 /* LEDCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

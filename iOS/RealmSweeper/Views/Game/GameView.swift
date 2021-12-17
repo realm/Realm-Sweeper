@@ -57,7 +57,7 @@ struct GameView: View {
     
     private func newMove() {
         let date = Date()
-        if game.startTime == nil {
+        if game.startTime == nil || game.gameStatus == .notStarted {
             $game.startTime.wrappedValue = date
             $game.gameStatus.wrappedValue = .inProgress
         }
@@ -74,8 +74,10 @@ struct GameView: View {
     }
     
     private func updateElapsedTime(_ date: Date) {
-        if let startTime = game.startTime {
-            elapsedTime = Int(date.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate)
+        if game.gameStatus == .inProgress {
+            if let startTime = game.startTime {
+                elapsedTime = Int(date.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate)
+            }
         }
     }
     
