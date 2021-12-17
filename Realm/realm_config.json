@@ -1,0 +1,7 @@
+{
+    "app_id": "realmsweeper-xxxx",
+    "config_version": 20210101,
+    "name": "RealmSweeper",
+    "location": "US-VA",
+    "deployment_model": "LOCAL"
+}

@@ -1,0 +1,97 @@
+{
+    "bsonType": "object",
+    "properties": {
+        "_id": {
+            "bsonType": "objectId"
+        },
+        "board": {
+            "bsonType": "object",
+            "properties": {
+                "rows": {
+                    "bsonType": "array",
+                    "items": {
+                        "bsonType": "object",
+                        "properties": {
+                            "cells": {
+                                "bsonType": "array",
+                                "items": {
+                                    "bsonType": "object",
+                                    "properties": {
+                                        "hasExploded": {
+                                            "bsonType": "bool"
+                                        },
+                                        "isExposed": {
+                                            "bsonType": "bool"
+                                        },
+                                        "isFlagged": {
+                                            "bsonType": "bool"
+                                        },
+                                        "isMine": {
+                                            "bsonType": "bool"
+                                        },
+                                        "numMineNeigbours": {
+                                            "bsonType": "long"
+                                        }
+                                    },
+                                    "required": [
+                                        "isMine",
+                                        "numMineNeigbours",
+                                        "isExposed",
+                                        "isFlagged",
+                                        "hasExploded"
+                                    ],
+                                    "title": "Cell"
+                                }
+                            }
+                        },
+                        "required": [],
+                        "title": "Row"
+                    }
+                },
+                "startingNumberOfMines": {
+                    "bsonType": "long"
+                }
+            },
+            "required": [
+                "startingNumberOfMines"
+            ],
+            "title": "Board"
+        },
+        "gameStatus": {
+            "bsonType": "string"
+        },
+        "latestMoveTime": {
+            "bsonType": "date"
+        },
+        "numCols": {
+            "bsonType": "long"
+        },
+        "numRows": {
+            "bsonType": "long"
+        },
+        "partition": {
+            "bsonType": "string"
+        },
+        "score": {
+            "bsonType": "long"
+        },
+        "secondsTakenToComplete": {
+            "bsonType": "long"
+        },
+        "startTime": {
+            "bsonType": "date"
+        },
+        "winningTimeInSeconds": {
+            "bsonType": "long"
+        }
+    },
+    "required": [
+        "_id",
+        "partition",
+        "numRows",
+        "numCols",
+        "score",
+        "gameStatus"
+    ],
+    "title": "Game"
+}

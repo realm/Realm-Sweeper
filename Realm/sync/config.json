@@ -1,0 +1,15 @@
+{
+    "state": "enabled",
+    "database_name": "RealmSweeper",
+    "partition": {
+        "key": "partition",
+        "type": "string",
+        "required": true,
+        "permissions": {
+            "read": true,
+            "write": true
+        }
+    },
+    "development_mode_enabled": true,
+    "service_name": "mongodb-atlas"
+}
