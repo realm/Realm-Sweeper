@@ -128,10 +128,8 @@
 		0A1F5037276B5F20009FDAD4 /* Game */ = {
 			isa = PBXGroup;
 			children = (
-				0ABC00382763B394003E059B /* GameListView.swift */,
 				0A11A10D2763CCD400FFDA75 /* GameView.swift */,
 				0A1F502E276A18FB009FDAD4 /* BoardView.swift */,
-				0AE1657C276C141300A5D6A8 /* GameSummaryView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -189,6 +187,7 @@
 				0ABC001A2763A0FC003E059B /* ContentView.swift */,
 				0A1F5032276A4B93009FDAD4 /* Components */,
 				0A1F5036276B5EFD009FDAD4 /* Users */,
+				0AE1657E276CAAFA00A5D6A8 /* Game List */,
 				0AE16577276BCD1D00A5D6A8 /* Control Box */,
 				0A1F5037276B5F20009FDAD4 /* Game */,
 				0A1F5035276B5EC1009FDAD4 /* Tiles */,
@@ -215,6 +214,15 @@
 				0AE16578276BCD5A00A5D6A8 /* StatusButton.swift */,
 			);
 			path = "Control Box";
+			sourceTree = "<group>";
+		};
+		0AE1657E276CAAFA00A5D6A8 /* Game List */ = {
+			isa = PBXGroup;
+			children = (
+				0ABC00382763B394003E059B /* GameListView.swift */,
+				0AE1657C276C141300A5D6A8 /* GameSummaryView.swift */,
+			);
+			path = "Game List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

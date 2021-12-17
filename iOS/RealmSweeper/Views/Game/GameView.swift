@@ -23,7 +23,7 @@ struct GameView: View {
                 Spacer()
                 LEDCounter(count: remainingMines)
                     .frame(width: 150, height: 70)
-                StatusButton(status: game.gameStatus, action: newGame)
+                StatusButton(status: game.statusEmoji, action: newGame)
                     .frame(width: 70, height: 70)
                     .padding()
                 LEDCounter(count: game.winningTimeInSeconds ?? (game.gameStatus == .inProgress ? elapsedTime : 888))

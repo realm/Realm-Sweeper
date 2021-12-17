@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StatusButton: View {
-    let status: GameStatus
+    let status: String
     var action: () -> Void = {}
     
     var body: some View {
@@ -20,8 +20,7 @@ struct StatusButton: View {
                     HStack(alignment: .center, spacing: 0) {
                         Spacer()
                         GeometryReader { geo in
-                            Text(status == .inProgress || status == .notStarted ? "🙂" :
-                                    status == .won ? "😎" : "😢")
+                            Text(status)
                                 .font(.system(size: geo.size.height * 0.7))
                         }
                         .padding([.top], 8)
@@ -38,7 +37,7 @@ struct StatusButton_Previews: PreviewProvider {
     static var previews: some View {
         _PreviewNoDevice(
             _PreviewColorScheme(
-                StatusButton(status: .inProgress)
+                StatusButton(status: "😎")
                     .frame(width: 100, height: 100, alignment: .center)
             )
         )

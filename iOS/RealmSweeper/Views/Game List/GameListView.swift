@@ -31,7 +31,7 @@ struct GameListView: View {
                 List {
                     ForEach(games) { game in
                         NavigationLink(destination: GameView(game: game)) {
-                            Text(game._id.stringValue)
+                            GameSummaryView(game: game)
                         }
                     }
                 }

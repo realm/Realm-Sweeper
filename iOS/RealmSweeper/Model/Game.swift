@@ -13,7 +13,7 @@ class Game: Object, ObjectKeyIdentifiable {
     @Persisted var numRows = 0
     @Persisted var numCols = 0
     @Persisted var score = 0
-    @Persisted var startTime: Date?
+    @Persisted var startTime: Date? = Date()
     @Persisted var latestMoveTime: Date?
     @Persisted var secondsTakenToComplete: Int?
     @Persisted var board: Board?
@@ -59,6 +59,19 @@ class Game: Object, ObjectKeyIdentifiable {
             if result { return }
         }
         return result
+    }
+    
+    var statusEmoji: String {
+        switch gameStatus {
+        case .notStarted:
+            return "😴"
+        case .inProgress:
+            return "🙂"
+        case .won:
+            return "😎"
+        case .lost:
+            return "😢"
+        }
     }
 }
 
