@@ -56,6 +56,9 @@ struct BoardView: View {
                     $board.rows[coord.row].cells[coord.col].isExposed.wrappedValue = true
                 }
                 $board.rows[row].cells[col].isExposed.wrappedValue = true
+                if board.rows[row].cells[col].isFlagged {
+                    $board.rows[row].cells[col].isFlagged.wrappedValue = false
+                }
                 newMove()
             }
         }
