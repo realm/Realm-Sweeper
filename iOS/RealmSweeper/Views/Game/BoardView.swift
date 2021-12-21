@@ -31,7 +31,10 @@ struct BoardView: View {
                                     .border(.black, width: 1.0)
                                     .onTapGesture() {
                                         expose(row: row, col: col)
-                                    }                                
+                                    }
+                                    .onLongPressGesture(minimumDuration: 0.1) {
+                                        flag(row: row, col: col)
+                                    }
                             }
                         }
                     }
@@ -62,6 +65,7 @@ struct BoardView: View {
     }
     
     private func flag(row: Int, col: Int) {
+        hapticFeedback(true)
         if gameStatus == .notStarted {
             gameStatus = .inProgress
         }
@@ -71,6 +75,11 @@ struct BoardView: View {
                 newMove()
             }
         }
+    }
+    
+    func hapticFeedback(_ isSuccess: Bool) {
+        let generator = UINotificationFeedbackGenerator()
+        generator.notificationOccurred(isSuccess ? .success : .error)
     }
 }
 

@@ -70,6 +70,7 @@ struct GameView: View {
             }
         }
         if game.hasLost {
+            hapticFeedback(false)
             $game.gameStatus.wrappedValue = .lost
         }
     }

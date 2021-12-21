@@ -24,6 +24,7 @@
 		0A1F5039276B5F49009FDAD4 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1F5038276B5F49009FDAD4 /* SettingsView.swift */; };
 		0A2BDB74276CCD5900A7A866 /* LEDCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2BDB73276CCD5900A7A866 /* LEDCounter.swift */; };
 		0A2BDB76276CD15500A7A866 /* CrystalItalic-R6A.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A2BDB75276CD15500A7A866 /* CrystalItalic-R6A.ttf */; };
+		0A33D9272771F7CC00974BE5 /* Haptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33D9262771F7CC00974BE5 /* Haptic.swift */; };
 		0ABC00192763A0FC003E059B /* RealmSweeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */; };
 		0ABC001B2763A0FC003E059B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABC001A2763A0FC003E059B /* ContentView.swift */; };
 		0ABC001D2763A0FF003E059B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ABC001C2763A0FF003E059B /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		0A1F5038276B5F49009FDAD4 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		0A2BDB73276CCD5900A7A866 /* LEDCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LEDCounter.swift; sourceTree = "<group>"; };
 		0A2BDB75276CD15500A7A866 /* CrystalItalic-R6A.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CrystalItalic-R6A.ttf"; sourceTree = "<group>"; };
+		0A33D9262771F7CC00974BE5 /* Haptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptic.swift; sourceTree = "<group>"; };
 		0ABC00152763A0FC003E059B /* RealmSweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSweeperApp.swift; sourceTree = "<group>"; };
 		0ABC001A2763A0FC003E059B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		0A33D9252771F7B000974BE5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0A33D9262771F7CC00974BE5 /* Haptic.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		0A802454276BAF51002E7B61 /* Counters */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 				0ABC00182763A0FC003E059B /* RealmSweeperApp.swift */,
 				0ABC002C2763A242003E059B /* Views */,
 				0ABC002D2763A26A003E059B /* Model */,
+				0A33D9252771F7B000974BE5 /* Helpers */,
 				0A11A1132763D6F700FFDA75 /* Custom Previews */,
 				0ABC002B2763A1E7003E059B /* Info.plist */,
 				0ABC001C2763A0FF003E059B /* Assets.xcassets */,
@@ -315,6 +326,7 @@
 				0A11A10E2763CCD400FFDA75 /* GameView.swift in Sources */,
 				0A11A1192763D6F700FFDA75 /* _PreviewNoDevice.swift in Sources */,
 				0A11A1122763D60300FFDA75 /* MineCountView.swift in Sources */,
+				0A33D9272771F7CC00974BE5 /* Haptic.swift in Sources */,
 				0AE16579276BCD5A00A5D6A8 /* StatusButton.swift in Sources */,
 				0A1BFA0B27690DA700301ED1 /* MineView.swift in Sources */,
 				0ABC00332763A3F6003E059B /* Board.swift in Sources */,
