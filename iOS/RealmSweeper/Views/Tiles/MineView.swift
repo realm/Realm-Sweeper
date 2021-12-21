@@ -14,7 +14,7 @@ struct MineView: View {
             Image("mine")
                 .resizable()
         }
-        .background(exploded ? .red : .gray)
+        .background(exploded ? .red : Color("Tile"))
     }
 }
 

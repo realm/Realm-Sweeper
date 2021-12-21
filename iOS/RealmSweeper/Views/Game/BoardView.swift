@@ -28,7 +28,7 @@ struct BoardView: View {
                                         width: min(geo.size.width / CGFloat(numCols), geo.size.height / CGFloat(numRows)),
                                         height: min(geo.size.width / CGFloat(numCols), geo.size.height / CGFloat(numRows))
                                     )
-                                    .border(.black, width: 1.0)
+                                    .border(.gray, width: 1.0)
                                     .onTapGesture() {
                                         expose(row: row, col: col)
                                     }
@@ -39,7 +39,7 @@ struct BoardView: View {
                         }
                     }
                 }
-                .border(.black, width: 3.0)
+                .border(.gray, width: 3.0)
             }
         }
     }

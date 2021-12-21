@@ -11,26 +11,25 @@ struct MineCountView: View {
     let count: Int
     
     var color: Color {
-        // TODO: Fix these colors
         switch count {
         case 0:
-            return .gray
+            return Color("Tile")
         case 1:
-            return .blue
+            return Color("One")
         case 2:
-            return .green
+            return Color("Two")
         case 3:
-            return .red
+            return Color("Three")
         case 4:
-            return .purple
+            return Color("Four")
         case 5:
-            return .brown
+            return Color("Five")
         case 6:
-            return .teal
+            return Color("Six")
         case 7:
-            return .black
+            return Color("Seven")
         case 8:
-            return .cyan
+            return Color("Eight")
         default:
             return .red
         }
@@ -48,7 +47,7 @@ struct MineCountView: View {
                 }
             }
         }
-        .background(.gray)
+        .background(Color("Tile"))
     }
 }
 

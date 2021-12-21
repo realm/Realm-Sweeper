@@ -43,7 +43,7 @@ struct GameView: View {
             }
             Spacer()
         }
-        .background(.gray)
+        .background(Color("Tile"))
         .onChange(of: game.latestMoveTime) { _ in
             countMines()
         }
