@@ -22,15 +22,16 @@ struct GameView: View {
             HStack {
                 Spacer()
                 LEDCounter(count: remainingMines)
-                    .frame(width: 150, height: 70)
+                    .frame(height: 70)
                 StatusButton(status: game.statusEmoji, action: newGame)
                     .frame(width: 70, height: 70)
                     .padding()
                 LEDCounter(count: game.winningTimeInSeconds ?? (game.gameStatus == .inProgress ? elapsedTime : 888))
-                    .frame(width: 150, height: 70)
+                    .frame(height: 70)
                     .onReceive(timer, perform: updateElapsedTime)
                 Spacer()
             }
+            .padding([.leading, .trailing])
             Spacer()
             if let board = game.board {
                 VStack {
