@@ -31,10 +31,7 @@ struct BoardView: View {
                                     .border(.black, width: 1.0)
                                     .onTapGesture() {
                                         expose(row: row, col: col)
-                                    }
-                                    .onLongPressGesture(minimumDuration: 0.5) {
-                                        flag(row: row, col: col)
-                                    }
+                                    }                                
                             }
                         }
                     }
