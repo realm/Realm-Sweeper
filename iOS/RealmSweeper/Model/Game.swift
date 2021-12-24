@@ -29,7 +29,7 @@ class Game: Object, ObjectKeyIdentifiable {
     
     var hasWon: Bool {
         guard let board = board else { return false }
-        if board.remainingMines > 0 { return false }
+        if board.remainingMines != 0 { return false }
         
         var result = true
         
