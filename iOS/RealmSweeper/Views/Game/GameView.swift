@@ -35,10 +35,8 @@ struct GameView: View {
             Spacer()
             if let board = game.board {
                 VStack {
-                    HStack {
-                        BoardView(board: board, gameStatus: $game.gameStatus, newMove: newMove)
-                            .padding()
-                    }
+                    BoardView(board: board, gameStatus: $game.gameStatus, newMove: newMove)
+                        .padding()
                 }
             }
             Spacer()
@@ -92,6 +90,6 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         let game = Game(rows: 12, cols: 12, mines: 15)
         GameView(game: game)
-            .previewInterfaceOrientation(.portrait)
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }

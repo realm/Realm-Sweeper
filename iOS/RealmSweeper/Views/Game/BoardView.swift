@@ -22,6 +22,7 @@ struct BoardView: View {
                 VStack(spacing: 0) {
                     ForEach(board.rows.indices) { row in
                         HStack(spacing: 0) {
+                            Spacer()
                             ForEach(board.rows[row].cells.indices) { col in
                                 CellView(cell: board.rows[row].cells[col], gameStatus: gameStatus)
                                     .frame(
@@ -36,10 +37,10 @@ struct BoardView: View {
                                         flag(row: row, col: col)
                                     }
                             }
+                            Spacer()
                         }
                     }
                 }
-                .border(.gray, width: 3.0)
             }
         }
     }
