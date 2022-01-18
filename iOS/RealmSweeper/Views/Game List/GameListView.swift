@@ -16,7 +16,6 @@ struct GameListView: View {
     @AppStorage("numMines") var numMines = 15
     
     @State private var startGame = false
-    @State private var isWaiting = true
     @State private var showingSettings = false
     
     @State private var game: Game?
@@ -36,10 +35,6 @@ struct GameListView: View {
                     }
                 }
             }
-            if isWaiting {
-                ProgressView()
-                    .onAppear(perform: waitABit)
-            }
             if let game = game {
                 NavigationLink(destination: GameView(game: game), isActive: $startGame) {}
             }
@@ -55,12 +50,6 @@ struct GameListView: View {
         }
     }
     
-    private func waitABit() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            isWaiting = false
-        }
-    }
-    
     private func createGame() {
         numMines = min(numMines, numRows * numColumns)
         game = Game(rows: numRows, cols: numColumns, mines: numMines)
@@ -71,8 +60,8 @@ struct GameListView: View {
     }
 }
 
-//struct GameListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GameListView()
-//    }
-//}
+struct GameListView_Previews: PreviewProvider {
+    static var previews: some View {
+        GameListView()
+    }
+}
