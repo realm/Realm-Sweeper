@@ -55,7 +55,7 @@ struct MineCountView_Previews: PreviewProvider {
     static var previews: some View {
         _PreviewNoDevice(
             _PreviewColorScheme (
-                Group {
+                HStack {
                     MineCountView(count: 0)
                         .frame(width: 50, height: 50)
                     MineCountView(count: 1)
@@ -65,7 +65,7 @@ struct MineCountView_Previews: PreviewProvider {
                     MineCountView(count: 3)
                         .frame(width: 50, height: 50)
                     MineCountView(count: 4)
-                        .frame(width: 100, height: 100)
+                        .frame(width: 50, height: 50)
                     MineCountView(count: 5)
                         .frame(width: 50, height: 50)
                 }
