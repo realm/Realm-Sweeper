@@ -20,10 +20,10 @@ struct BoardView: View {
         return VStack {
             GeometryReader { geo in
                 VStack(spacing: 0) {
-                    ForEach(board.rows.indices) { row in
+                    ForEach(board.rows.indices, id: \.self) { row in
                         HStack(spacing: 0) {
                             Spacer()
-                            ForEach(board.rows[row].cells.indices) { col in
+                            ForEach(board.rows[row].cells.indices, id: \.self) { col in
                                 CellView(cell: board.rows[row].cells[col], gameStatus: gameStatus)
                                     .frame(
                                         width: min(geo.size.width / CGFloat(numCols), geo.size.height / CGFloat(numRows)),
