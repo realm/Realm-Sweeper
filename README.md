@@ -5,5 +5,5 @@ Realm-Sweeper is a collaborative version of the Windows Mine Sweeper app. It dem
 ![Realm-Sweeper demo](assets/realm-sweeper.gif)
 
 ## Installation
-- [Setup the Realm Backend](Realm)
+- [Setup the Atlas Backend App](atlas-app)
 - [Configure, build and run the iOS app](iOS)

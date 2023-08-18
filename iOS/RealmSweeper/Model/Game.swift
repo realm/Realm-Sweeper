@@ -10,6 +10,7 @@ import RealmSwift
 
 class Game: Object, ObjectKeyIdentifiable {
     @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var username = ""
     @Persisted var numRows = 0
     @Persisted var numCols = 0
     @Persisted var score = 0
@@ -20,8 +21,9 @@ class Game: Object, ObjectKeyIdentifiable {
     @Persisted var gameStatus = GameStatus.notStarted
     @Persisted var winningTimeInSeconds: Int?
     
-    convenience init(rows: Int, cols: Int, mines: Int) {
+    convenience init(username: String, rows: Int, cols: Int, mines: Int) {
         self.init()
+        self.username = username
         numRows = rows
         numCols = cols
         board = Board(numRows: rows, numColums: cols, numMines: mines)

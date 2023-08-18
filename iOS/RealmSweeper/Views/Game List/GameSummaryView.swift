@@ -22,6 +22,7 @@ struct GameSummaryView: View {
             HStack {
                 if let completionTime = game.winningTimeInSeconds {
                     Text("Completed in \(completionTime) seconds")
+                        .font(.caption)
                 }
                 Spacer()
                 if let board = game.board {

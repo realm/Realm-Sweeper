@@ -15,9 +15,11 @@ struct ContentView: View {
             if username == "" {
                 LoginView(username: $username)
             } else {
-                GameListView()
-                    .environment(\.realmConfiguration, realmApp.currentUser!.configuration(partitionValue: username))
-                    .navigationBarItems(leading: realmApp.currentUser != nil ? LogoutButton(username: $username) : nil)
+                if let currentUser = realmApp.currentUser {
+                    GameListView(username: username)
+                        .environment(\.realmConfiguration, currentUser.flexibleSyncConfiguration())
+                        .navigationBarItems(leading: realmApp.currentUser != nil ? LogoutButton(username: $username) : nil)
+                }
             }
         }
         .currentDeviceNavigationViewStyle(alwaysStacked: true)

@@ -9,13 +9,13 @@ This is the backend Realm app for Realm-Sweeper.
 1. Install the [Realm CLI](https://docs.mongodb.com/realm/deploy/realm-cli-reference) and [create an API key pair](https://docs.atlas.mongodb.com/configure-api-access#programmatic-api-keys).
 1. Download the repo and install the Realm app:
 ```
-git clone git@github.com:mongodb-developer/Realm-Sweeper.git
-cd Realm-Draw/Realm
+git clone git@github.com:realm/Realm-Sweeper.git
+cd Realm-Sweeper/atlas-app
 realm-cli login --api-key <your new public key> --private-api-key <your new private key>
 realm-cli import # Then answer prompts, naming the app RealmSweeper
 ```
-4. From the Atlas UI, click on the Realm logo and you will see the RChat app. Open it and copy the App Id
+4. From the Atlas UI, click on the App Services tab and you will see the RealmSweeper app. Open it and copy the App Id
 
-![Realm application Id](../assets/realm-app-id.png)
+![MongoDB Atlas application Id](../assets/realm-app-id.png)
 
 5. Use that App ID in the [iOS app](../iOS)

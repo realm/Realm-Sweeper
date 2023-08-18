@@ -69,9 +69,6 @@
         "numRows": {
             "bsonType": "long"
         },
-        "partition": {
-            "bsonType": "string"
-        },
         "score": {
             "bsonType": "long"
         },
@@ -81,13 +78,16 @@
         "startTime": {
             "bsonType": "date"
         },
+        "username": {
+            "bsonType": "string"
+        },
         "winningTimeInSeconds": {
             "bsonType": "long"
         }
     },
     "required": [
         "_id",
-        "partition",
+        "username",
         "numRows",
         "numCols",
         "score",

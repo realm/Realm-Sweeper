@@ -1,0 +1,23 @@
+{
+    "collection": "Game",
+    "database": "RealmSweeper",
+    "roles": [
+        {
+            "name": "readOwnWriteOwn",
+            "apply_when": {},
+            "document_filters": {
+                "write": {
+                    "username": "%%user.data.email"
+                },
+                "read": {
+                    "username": "%%user.data.email"
+                }
+            },
+            "read": true,
+            "write": true,
+            "insert": true,
+            "delete": true,
+            "search": true
+        }
+    ]
+}

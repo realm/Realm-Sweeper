@@ -210,10 +210,10 @@
 		0ABC002D2763A26A003E059B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0ABC00302763A2A2003E059B /* Cell.swift */,
-				0ABC00342763A494003E059B /* Row.swift */,
-				0ABC00322763A3F6003E059B /* Board.swift */,
 				0ABC00362763AE85003E059B /* Game.swift */,
+				0ABC00322763A3F6003E059B /* Board.swift */,
+				0ABC00342763A494003E059B /* Row.swift */,
+				0ABC00302763A2A2003E059B /* Cell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

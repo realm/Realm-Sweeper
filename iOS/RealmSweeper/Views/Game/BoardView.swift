@@ -86,7 +86,7 @@ struct BoardView: View {
 
 struct BoardView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = Game(rows: 12, cols: 12, mines: 15)
+        let game = Game(username: "Andrew", rows: 12, cols: 12, mines: 15)
         return BoardView(board: game.board!, gameStatus: .constant(.inProgress), newMove: {})
     }
 }
