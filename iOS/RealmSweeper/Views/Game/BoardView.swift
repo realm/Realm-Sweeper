@@ -31,6 +31,7 @@ struct BoardView: View {
                                     )
                                     .border(.gray, width: 1.0)
                                     .onTapGesture() {
+																				guard !board.rows[row].cells[col].isFlagged else { return }
                                         expose(row: row, col: col)
                                     }
                                     .onLongPressGesture(minimumDuration: 0.1) {
